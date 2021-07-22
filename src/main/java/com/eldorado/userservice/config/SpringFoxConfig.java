@@ -31,7 +31,7 @@ public class SpringFoxConfig {
 				"Spring Boot REST API for EL DORADO App",
 				"1.0",
 				"Terms of service",
-				new Contact("BATCH 1","https://tools.publicis.sapient.com/bitbucket/projects/PSMS/repos/product-phase","xyz@publicissapient.com"),
+				new Contact("BATCH 1","https://tools.publiciss.ssapient.com/bitbucket/projects/PSMS/repos/product-phase","xyz@publicisssapient.com"),
 				"Apache License Version 2.2",
 				"https://www.eldorado.com");
 				
