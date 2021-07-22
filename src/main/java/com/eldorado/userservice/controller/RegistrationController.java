@@ -21,16 +21,9 @@ public class RegistrationController {
 	
 	Logger log = LoggingConfig.getLog();
 	
-	// Add a new Head Member
+	// Add a new User
 	@PostMapping("/register")
 	public User addUser(@RequestBody User user) {
-		user.setAccountNonExpired(1);
-		user.setCredentialsNonExpired(1);
-		user.setAccountNonExpired(1);
-		user.setAccountNonExpired(1);
-		user.setAccountNonExpired(1);
-		user.setAccountNonExpired(1);
-		user.setAccountNonExpired(1);
 		return userRepo.save(user);
 	}
 }
