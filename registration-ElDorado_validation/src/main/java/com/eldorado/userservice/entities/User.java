@@ -4,45 +4,36 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
 
 @Entity
 public class User implements Serializable {
-
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name="id")
 	private int id;
-
-	@Column(name = "username")
-	@Email
-	@NotBlank(message = "Email is mandatory")
+	
+	@Column(name="username")
 	private String username;
-
-	@Column(name = "password")
-	@NotBlank(message = "Password is mandatory")
+	
+	@Column(name="password")
 	private String password;
+	
+	@Column(name="enabled")
+	private int enabled;
+	
+	@Column(name="isVerified")
+	private boolean isVerified;
+	
+	@Column(name="accountNonExpired")
+	private int accountNonExpired;
+	
+	@Column(name="credentialsNonExpired")
+	private int credentialsNonExpired;
+	
+	@Column(name="accountNonLocked")
+	private int accountNonLocked;
 
-	@Column(name = "enabled")
-	private int enabled = 1;
-
-	@Column(name = "isVerified")
-	private int isVerified = 0;
-
-	@Column(name = "accountNonExpired")
-	private int accountNonExpired = 1;
-
-	@Column(name = "credentialsNonExpired")
-	private int credentialsNonExpired = 1;
-
-	@Column(name = "accountNonLocked")
-	private int accountNonLocked = 1;
-
+	
 	public int getId() {
 		return id;
 	}
@@ -75,11 +66,11 @@ public class User implements Serializable {
 		this.enabled = enabled;
 	}
 
-	public int getIsVerified() {
+	public boolean isVerified() {
 		return isVerified;
 	}
 
-	public void setIsVerified(int isVerified) {
+	public void setVerified(boolean isVerified) {
 		this.isVerified = isVerified;
 	}
 

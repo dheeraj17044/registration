@@ -7,8 +7,7 @@ import com.eldorado.userservice.entities.User;
 
 
 
-
 @Repository
 public interface UserRepository  extends JpaRepository<User, String>{
-	 User findByUsernameIgnoreCase(String username);
+
 }
