@@ -18,4 +18,4 @@ Atleast
 1) one uppercase character
 2) one digit
 3) one special character
-4) length between 8 to 20.
+4) length between 8 to 20  .
